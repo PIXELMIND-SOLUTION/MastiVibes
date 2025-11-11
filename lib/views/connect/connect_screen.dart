@@ -61,15 +61,9 @@ class _ConnectScreenState extends State<ConnectScreen> {
                   padding: const EdgeInsets.all(16.0),
                   child: Row(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: IconButton(
-                          icon: const Icon(Icons.arrow_back, color: Colors.black),
-                          onPressed: () => Navigator.of(context).pop(),
-                        ),
+                      IconButton(
+                        icon: const Icon(Icons.arrow_back, color: Colors.black),
+                        onPressed: () => Navigator.of(context).pop(),
                       ),
                     ],
                   ),

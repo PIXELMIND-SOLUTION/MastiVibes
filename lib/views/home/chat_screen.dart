@@ -7,7 +7,7 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFDF3F5), 
+      backgroundColor: const Color(0xFFFDF3F5),
       appBar: AppBar(
         backgroundColor: const Color(0xFFFDF3F5),
         elevation: 0,
@@ -19,6 +19,7 @@ class ChatScreen extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
         centerTitle: false,
       ),
       body: Center(
@@ -33,7 +34,10 @@ class ChatScreen extends StatelessWidget {
             const SizedBox(height: 30),
             GestureDetector(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>ConnectingFriends()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ConnectingFriends()),
+                );
               },
               child: Container(
                 padding: const EdgeInsets.symmetric(
@@ -41,7 +45,7 @@ class ChatScreen extends StatelessWidget {
                   horizontal: 40,
                 ),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFE0A62), 
+                  color: const Color(0xFFFE0A62),
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: const Text(

@@ -1,3 +1,4 @@
+import 'package:dating_app/views/credits/credits_screen.dart';
 import 'package:flutter/material.dart';
 
 class RoomScreen extends StatelessWidget {
@@ -33,33 +34,38 @@ class RoomScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 14),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 20,
-                          height: 20,
-                          decoration: const BoxDecoration(
-                            color: Color(0xFFFFD700),
-                            shape: BoxShape.circle,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>CreditsScreen()));
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 20,
+                            height: 20,
+                            decoration: const BoxDecoration(
+                              color: Color(0xFFFFD700),
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.asset('assets/coin.png')
                           ),
-                          child: Image.asset('assets/coin.png')
-                        ),
-                        const SizedBox(width: 6),
-                        const Text(
-                          '200',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
+                          const SizedBox(width: 6),
+                          const Text(
+                            '200',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   const Spacer(),
@@ -384,6 +390,7 @@ class _AudioCallDialogState extends State<AudioCallDialog> {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {
+                Navigator.of(context).pop();
                 // Handle create room
               },
               style: ElevatedButton.styleFrom(

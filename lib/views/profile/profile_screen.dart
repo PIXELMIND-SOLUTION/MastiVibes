@@ -1,3 +1,4 @@
+import 'package:dating_app/views/Earnings/earning_screen.dart';
 import 'package:dating_app/views/blocked/blocked_chat.dart';
 import 'package:dating_app/views/profile/edit_profile.dart';
 import 'package:dating_app/views/rateapp/rate_app_screen.dart';
@@ -97,10 +98,18 @@ class ProfileScreen extends StatelessWidget {
                 title: 'Blocked Chats',
               ),
             ),
-            _buildMenuItem(
-              context: context,
-              icon: Icons.account_balance_wallet_outlined,
-              title: 'My Earnings',
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => EarningScreen()),
+                );
+              },
+              child: _buildMenuItem(
+                context: context,
+                icon: Icons.account_balance_wallet_outlined,
+                title: 'My Earnings',
+              ),
             ),
             _buildMenuItem(
               context: context,
@@ -148,7 +157,7 @@ class ProfileScreen extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          'Main Content Here',
+          'Profile',
           style: TextStyle(fontSize: 18, color: Colors.grey),
         ),
       ),

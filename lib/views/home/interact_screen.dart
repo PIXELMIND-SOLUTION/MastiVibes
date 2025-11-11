@@ -1,3 +1,4 @@
+import 'package:dating_app/views/connect/connect_screen.dart';
 import 'package:flutter/material.dart';
 
 class InteractScreen extends StatelessWidget {
@@ -133,6 +134,8 @@ class InteractScreen extends StatelessWidget {
                             label: 'Random',
                             subtitle: '10 coins/min',
                             color: const Color(0xFFE91E63),
+                            context: context
+
                           ),
                         ),
                         const SizedBox(width: 16),
@@ -142,6 +145,7 @@ class InteractScreen extends StatelessWidget {
                             label: 'Random',
                             subtitle: '10 coins/min',
                             color: const Color(0xFFE91E63),
+                            context: context
                           ),
                         ),
                       ],
@@ -208,6 +212,7 @@ class InteractScreen extends StatelessWidget {
   }
 
   Widget _buildActionButton({
+    required BuildContext context,
     required IconData icon,
     required String label,
     required String subtitle,
@@ -222,16 +227,21 @@ class InteractScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: color,
-              shape: BoxShape.circle,
-            ),
-            child: Icon(
-              icon,
-              color: Colors.white,
-              size: 20,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ConnectScreen()));
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: color,
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                icon,
+                color: Colors.white,
+                size: 20,
+              ),
             ),
           ),
           const SizedBox(width: 8),

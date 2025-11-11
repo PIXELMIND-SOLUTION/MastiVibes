@@ -128,7 +128,7 @@
 //                       children: [
 //                         _buildGenderOption(
 //                           'Girl',
-//                           'assets/womenicon.png', 
+//                           'assets/womenicon.png',
 //                           Colors.pink.shade100,
 //                           Colors.pink,
 //                           selectedGender == 'Girl',
@@ -140,7 +140,7 @@
 //                         ),
 //                         _buildGenderOption(
 //                           'Boy',
-//                           'assets/manicon.png', 
+//                           'assets/manicon.png',
 //                           Colors.blue.shade100,
 //                           Colors.blue,
 //                           selectedGender == 'Boy',
@@ -343,18 +343,6 @@
 //     );
 //   }
 // }
-
-
-
-
-
-
-
-
-
-
-
-
 
 import 'package:dating_app/views/languages/select_language_screen.dart';
 import 'package:flutter/material.dart';
@@ -788,7 +776,12 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                 child: ElevatedButton(
                   onPressed: selectedAvatarIndex != null
                       ? () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectLanguageScreen()));
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SelectLanguageScreen(),
+                            ),
+                          );
                           // Handle avatar selection
                           // ScaffoldMessenger.of(context).showSnackBar(
                           //   SnackBar(
@@ -853,10 +846,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                 color: Colors.grey.shade100,
               ),
               child: Center(
-                child: Image.asset(
-                  avatarPaths[index],
-                  fit: BoxFit.cover,
-                ),
+                child: Image.asset(avatarPaths[index], fit: BoxFit.cover),
               ),
             ),
             if (isSelected)
@@ -871,11 +861,7 @@ class _AvatarSelectionScreenState extends State<AvatarSelectionScreen> {
                     shape: BoxShape.circle,
                     border: Border.all(color: Colors.white, width: 2),
                   ),
-                  child: const Icon(
-                    Icons.check,
-                    size: 14,
-                    color: Colors.white,
-                  ),
+                  child: const Icon(Icons.check, size: 14, color: Colors.white),
                 ),
               ),
           ],

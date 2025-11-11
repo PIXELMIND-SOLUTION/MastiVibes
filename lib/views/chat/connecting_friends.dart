@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:dating_app/views/chat/chat_screen.dart';
-import 'package:dating_app/views/home/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 class ConnectingFriends extends StatefulWidget {

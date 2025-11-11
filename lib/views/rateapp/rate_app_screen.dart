@@ -51,7 +51,7 @@ class _RateAppScreenState extends State<RateAppScreen> {
                     });
                   },
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: Icon(
                       filled ? Icons.star : Icons.star_border,
                       size: 35,
@@ -64,11 +64,11 @@ class _RateAppScreenState extends State<RateAppScreen> {
 
             const SizedBox(height: 20),
 
-            // Text field
             Container(
-              height: 200,
+              height: 250,
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey),
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
               ),

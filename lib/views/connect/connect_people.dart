@@ -408,6 +408,12 @@
 //   }
 // }
 
+
+
+
+
+// ignore_for_file: deprecated_member_use
+
 import 'package:dating_app/views/navbar/navbar_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -633,7 +639,7 @@ class _ConnectPeopleState extends State<ConnectPeople>
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: const Text(
-                          '0:10',
+                          '+ 5:10',
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
@@ -647,7 +653,7 @@ class _ConnectPeopleState extends State<ConnectPeople>
                             height: 40,
                             decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.white24,
+                              color: Colors.white,
                             ),
                             child: const Icon(
                               Icons.dangerous_outlined,

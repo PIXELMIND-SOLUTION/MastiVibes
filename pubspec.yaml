@@ -82,6 +82,9 @@ flutter:
     - assets\coin.png
     - assets/connectrectangle.png
     - assets/connectrectanglebottom.png
+    - assets\coinsimage.png
+    - assets\singlecoin.png
+    - assets\heart.png
     
   #   - images/a_dot_ham.jpeg
 
